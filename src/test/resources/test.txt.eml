@@ -1,0 +1,33 @@
+MIME-Version: 1.0
+Message-ID: <123@example.org>
+Date: Sat, 22 Apr 2017 14:05:47 +0000
+Subject: Test
+From: Example <example@example.org>
+To: Example <example@example.org>
+Content-Type: multipart/mixed; boundary=001a113e7c4aec7a46054dc1de3a
+
+--001a113e7c4aec7a46054dc1de3a
+Content-Type: multipart/alternative; boundary=001a113e7c4aec7a42054dc1de38
+
+--001a113e7c4aec7a42054dc1de38
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+
+
+--001a113e7c4aec7a42054dc1de38
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+--001a113e7c4aec7a42054dc1de38--
+--001a113e7c4aec7a46054dc1de3a
+Content-Type: text/plain; name="test.txt"
+Content-Disposition: attachment; filename="test.txt"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: 15b95fb9023bb946bc51
+Content-ID: <15b95fb9023bb946bc51>
+
+UEsDBAoAAAAAACh4lkqzfJEGDgAAAA4AAAAIABwAdGVzdC50eHRVVAkAAyxi+1gsYvtYdXgLAAEE
+AAAAAAQAAAAAVGVzdCB6aXAgZmlsZQpQSwECHgMKAAAAAAAoeJZKs3yRBg4AAAAOAAAACAAYAAAA
+AAABAAAA/4EAAAAAdGVzdC50eHRVVAUAAyxi+1h1eAsAAQQAAAAABAAAAABQSwUGAAAAAAEAAQBO
+AAAAUAAAAAAA
+--001a113e7c4aec7a46054dc1de3a--
