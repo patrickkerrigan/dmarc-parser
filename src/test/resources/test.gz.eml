@@ -1,0 +1,30 @@
+MIME-Version: 1.0
+Message-ID: <123@example.org>
+Date: Sat, 22 Apr 2017 14:05:47 +0000
+Subject: Test
+From: Example <example@example.org>
+To: Example <example@example.org>
+Content-Type: multipart/mixed; boundary=001a11430fb4b62437054dc212b6
+
+--001a11430fb4b62437054dc212b6
+Content-Type: multipart/alternative; boundary=001a11430fb4b62414054dc212b4
+
+--001a11430fb4b62414054dc212b4
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+
+
+--001a11430fb4b62414054dc212b4
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+--001a11430fb4b62414054dc212b4--
+--001a11430fb4b62437054dc212b6
+Content-Type: application/x-gzip; name="test.gz"
+Content-Disposition: attachment; filename="test.gz"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: 15b9608d13aab3653cf1
+Content-ID: <15b9608d13aab3653cf1>
+
+H4sICNpi+1gAA3Rlc3QudHh0AAtJLS5RSK/KLFBIy8xJ5QIA9wC+5g8AAAA=
+--001a11430fb4b62437054dc212b6--
