@@ -9,13 +9,13 @@ case object PolicyOverrideLocalPolicy extends PolicyOverride {val value="local_p
 case object PolicyOverrideOther extends PolicyOverride {val value="other"}
 
 object PolicyOverride {
-  def fromString(text: String): PolicyOverride = text match {
-    case t if t.equalsIgnoreCase(PolicyOverrideForwarded.value) => PolicyOverrideForwarded
-    case t if t.equalsIgnoreCase(PolicyOverrideSampledOut.value) => PolicyOverrideSampledOut
-    case t if t.equalsIgnoreCase(PolicyOverrideTrustedForwarder.value) => PolicyOverrideTrustedForwarder
-    case t if t.equalsIgnoreCase(PolicyOverrideMailingList.value) => PolicyOverrideMailingList
-    case t if t.equalsIgnoreCase(PolicyOverrideLocalPolicy.value) => PolicyOverrideLocalPolicy
-    case t if t.equalsIgnoreCase(PolicyOverrideOther.value) => PolicyOverrideOther
+  def fromString(text: String): PolicyOverride = text.toLowerCase match {
+    case PolicyOverrideForwarded.value => PolicyOverrideForwarded
+    case PolicyOverrideSampledOut.value => PolicyOverrideSampledOut
+    case PolicyOverrideTrustedForwarder.value => PolicyOverrideTrustedForwarder
+    case PolicyOverrideMailingList.value => PolicyOverrideMailingList
+    case PolicyOverrideLocalPolicy.value => PolicyOverrideLocalPolicy
+    case PolicyOverrideOther.value => PolicyOverrideOther
     case _ => PolicyOverrideOther
   }
 }

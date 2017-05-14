@@ -1,7 +1,7 @@
 organization := "uk.pkerrigan"
 name := "dmarc-parser"
 
-version := "1.0"
+version := "1.0.1"
 
 scalaVersion := "2.12.1"
 

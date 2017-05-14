@@ -10,14 +10,14 @@ case object DkimResultTempError extends DkimResult {val value="temperror"}
 case object DkimResultPermError extends DkimResult {val value="permerror"}
 
 object DkimResult {
-  def fromString(text: String): DkimResult = text match {
-    case t if t.equalsIgnoreCase(DkimResultNone.value) => DkimResultNone
-    case t if t.equalsIgnoreCase(DkimResultPass.value) => DkimResultPass
-    case t if t.equalsIgnoreCase(DkimResultFail.value) => DkimResultFail
-    case t if t.equalsIgnoreCase(DkimResultPolicy.value) => DkimResultPolicy
-    case t if t.equalsIgnoreCase(DkimResultNeutral.value) => DkimResultNeutral
-    case t if t.equalsIgnoreCase(DkimResultTempError.value) => DkimResultTempError
-    case t if t.equalsIgnoreCase(DkimResultPermError.value) => DkimResultPermError
+  def fromString(text: String): DkimResult = text.toLowerCase match {
+    case DkimResultNone.value => DkimResultNone
+    case DkimResultPass.value => DkimResultPass
+    case DkimResultFail.value => DkimResultFail
+    case DkimResultPolicy.value => DkimResultPolicy
+    case DkimResultNeutral.value => DkimResultNeutral
+    case DkimResultTempError.value => DkimResultTempError
+    case DkimResultPermError.value => DkimResultPermError
     case _ => DkimResultNone
   }
 }
