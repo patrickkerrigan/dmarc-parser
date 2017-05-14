@@ -7,6 +7,7 @@ import java.util.zip.{GZIPInputStream, ZipInputStream}
 import javax.activation.DataSource
 import javax.mail.Session
 import javax.mail.internet.MimeMessage
+import scala.collection.JavaConverters._
 
 import org.apache.commons.mail.util.MimeMessageParser
 import uk.pkerrigan.dmarcparser.report.Feedback
@@ -25,10 +26,7 @@ class EmailParser(parser: ParserTrait = new Parser()) extends EmailParserTrait{
     val message = new MimeMessage(s, is)
     val messageParser = new MimeMessageParser(message).parse()
 
-    if (messageParser.getAttachmentList.isEmpty)
-      None
-    else
-      extract(messageParser.getAttachmentList.get(0))
+    messageParser.getAttachmentList.asScala.headOption.flatMap(extract)
   }
 
   private def extract(a: DataSource): Option[Feedback] = a match {
