@@ -1,5 +1,6 @@
+[![Build Status](https://img.shields.io/travis/patrickkerrigan/dmarc-parser.svg?style=flat-square)](https://travis-ci.org/patrickkerrigan/dmarc-parser) ![Scala 2.12](https://img.shields.io/badge/scala-2.12-red.svg?style=flat-square)
+
 # dmarc-parser
-[![Build Status](https://travis-ci.org/patrickkerrigan/dmarc-parser.svg?branch=master)](https://travis-ci.org/patrickkerrigan/dmarc-parser)
 
 A Scala library for parsing DMARC aggregate reports as defined in [RFC 7489](https://tools.ietf.org/html/rfc7489#appendix-C)
 
